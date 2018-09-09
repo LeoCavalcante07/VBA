@@ -1,0 +1,45 @@
+Sub x()
+
+Dim result As Double
+Dim num1 As Double
+Dim num2 As Double
+Dim operador As String
+
+num1 = InputBox("Digite um numero")
+operador = InputBox("Digite o operador")
+num2 = InputBox("Digite outro numero")
+
+Select Case operador
+    Case "+"
+        result = num1 + num2
+    Case "-"
+        result = num1 - num2
+    Case "*"
+        result = num1 * num2
+    Case "/"
+        Select Case num2
+            Case 0
+                MsgBox ("nenhum número pode ser dividido por " & num2)
+            Case Else
+                result = num1 / num2
+        End Select
+    Case Else
+        MsgBox ("Operador inválido")
+        Exit Sub
+        
+        
+        
+        
+        
+End Select
+
+MsgBox (num1 & " " & operador & " " & num2 & " é " & "igual à " & result)
+    
+        
+    
+
+
+
+
+
+End Sub
